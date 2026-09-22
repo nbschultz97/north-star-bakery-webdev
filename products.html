@@ -25,35 +25,75 @@
 
   <main>
     <h2>Our Products</h2>
-    <p>Everything is baked fresh in small batches, so availability changes daily. Ask us about custom orders for events and celebrations.</p>
+    <p>Everything is baked fresh in small batches, so availability changes daily. Ask us about custom orders for events and celebrations. Tap "Save for Pickup" on any item to build a quick list to bring up when you call or stop by &mdash; it will still be here next time you visit this page.</p>
+
+    <section aria-labelledby="favorites-heading" id="favorites-section">
+      <h3 id="favorites-heading">Your Saved Items</h3>
+      <p id="favorites-empty-message">You haven't saved anything yet. Use "Save for Pickup" below to start your list.</p>
+      <ul id="favorites-list"></ul>
+      <button type="button" id="clear-favorites-btn" hidden>Clear Saved Items</button>
+    </section>
 
     <section aria-labelledby="breads-heading">
       <h3 id="breads-heading">Breads</h3>
       <img src="images/bakery-bread.jpg" alt="Assortment of fresh-baked bread loaves cooling on a wire rack">
-      <ul>
-        <li>Classic Sourdough &ndash; $7 to $9</li>
-        <li>Whole Wheat Country Loaf &ndash; $6 to $8</li>
-        <li>Seeded Multigrain &ndash; $7 to $9</li>
-        <li>Ciabatta &ndash; $5 to $7</li>
+      <ul class="product-list">
+        <li class="product-item" data-name="Classic Sourdough" data-price="$7 to $9" data-category="Breads">
+          <span>Classic Sourdough &ndash; $7 to $9</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Whole Wheat Country Loaf" data-price="$6 to $8" data-category="Breads">
+          <span>Whole Wheat Country Loaf &ndash; $6 to $8</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Seeded Multigrain" data-price="$7 to $9" data-category="Breads">
+          <span>Seeded Multigrain &ndash; $7 to $9</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Ciabatta" data-price="$5 to $7" data-category="Breads">
+          <span>Ciabatta &ndash; $5 to $7</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
       </ul>
     </section>
 
     <section aria-labelledby="pastries-heading">
       <h3 id="pastries-heading">Pastries</h3>
-      <ul>
-        <li>Butter Croissants &ndash; $3 to $4</li>
-        <li>Cinnamon Rolls &ndash; $4 to $5</li>
-        <li>Seasonal Fruit Danishes &ndash; $4 to $6</li>
-        <li>Scones &ndash; $3 to $4</li>
+      <ul class="product-list">
+        <li class="product-item" data-name="Butter Croissants" data-price="$3 to $4" data-category="Pastries">
+          <span>Butter Croissants &ndash; $3 to $4</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Cinnamon Rolls" data-price="$4 to $5" data-category="Pastries">
+          <span>Cinnamon Rolls &ndash; $4 to $5</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Seasonal Fruit Danishes" data-price="$4 to $6" data-category="Pastries">
+          <span>Seasonal Fruit Danishes &ndash; $4 to $6</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Scones" data-price="$3 to $4" data-category="Pastries">
+          <span>Scones &ndash; $3 to $4</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
       </ul>
     </section>
 
     <section aria-labelledby="cakes-heading">
       <h3 id="cakes-heading">Cakes</h3>
-      <ul>
-        <li>Celebration Layer Cakes &ndash; $35 to $65, depending on size</li>
-        <li>Custom Birthday Cakes &ndash; starting at $40</li>
-        <li>Event and Wedding Cakes &ndash; priced by consultation</li>
+      <ul class="product-list">
+        <li class="product-item" data-name="Celebration Layer Cake" data-price="$35 to $65" data-category="Cakes">
+          <span>Celebration Layer Cakes &ndash; $35 to $65, depending on size</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Custom Birthday Cake" data-price="starting at $40" data-category="Cakes">
+          <span>Custom Birthday Cakes &ndash; starting at $40</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
+        <li class="product-item" data-name="Event or Wedding Cake" data-price="priced by consultation" data-category="Cakes">
+          <span>Event and Wedding Cakes &ndash; priced by consultation</span>
+          <button type="button" class="save-btn">Save for Pickup</button>
+        </li>
       </ul>
       <p>Pricing ranges are estimates. Final pricing depends on size, flavor, and design. No online checkout is available &mdash; please call, email, or use our contact form to place a pre-order.</p>
     </section>
@@ -70,5 +110,7 @@
       </ul>
     </nav>
   </footer>
+
+  <script src="favorites.js"></script>
 </body>
 </html>

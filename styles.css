@@ -202,6 +202,96 @@ button[type="submit"]:focus {
   color: var(--color-charcoal);
 }
 
+/* Product list and Save for Pickup / favorites feature */
+.product-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid var(--color-peach);
+  border-radius: 6px;
+  background-color: var(--color-cream);
+}
+
+.product-item .save-btn {
+  align-self: flex-start;
+  background-color: var(--color-peach);
+  color: var(--color-charcoal);
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.product-item .save-btn:hover,
+.product-item .save-btn:focus {
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+}
+
+#favorites-section {
+  border: 2px solid var(--color-brown);
+}
+
+#favorites-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#favorites-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+#favorites-list button {
+  background-color: transparent;
+  border: 1px solid var(--color-brown);
+  color: var(--color-brown);
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+#clear-favorites-btn {
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .product-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* Media element sizing */
 video,
 audio {
