@@ -1,0 +1,271 @@
+/* North Star Bakery - Visual Design & Responsive Layout (Touchstone 3)
+   Palette: cream #FFF8F0, brown #6B3E26, peach #D88C5A, charcoal #2F2A26
+   Fonts: 'Poppins' (headings) + 'Lora' (body) - 2 font families, mobile-first, Flexbox */
+
+:root {
+  --color-cream: #FFF8F0;
+  --color-brown: #6B3E26;
+  --color-peach: #D88C5A;
+  --color-charcoal: #2F2A26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lora', Georgia, serif;
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, legend {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--color-brown);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+a {
+  color: var(--color-brown);
+}
+
+/* Header - mobile-first, stacked; Flexbox for alignment */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  padding: 1rem;
+  text-align: center;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-cream);
+}
+
+header h1 {
+  color: var(--color-cream);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Nav - Flexbox, stacked on mobile, row on larger screens (see media query) */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  color: var(--color-cream);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--color-peach);
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-charcoal);
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid var(--color-peach);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+section h2 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--color-peach);
+  padding-bottom: 0.5rem;
+}
+
+/* Figure */
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--color-brown);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Product / list styling */
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Form - Flexbox layout, mobile-first stacked fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-peach);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--color-brown);
+  border-radius: 4px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-peach);
+  outline-offset: 1px;
+}
+
+/* Validation feedback (used by Touchstone 4 JS) */
+.field-error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  font-family: 'Lora', Georgia, serif;
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--color-peach);
+  color: var(--color-charcoal);
+}
+
+/* Media element sizing */
+video,
+audio {
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  margin: 0.75rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+footer nav ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer nav a {
+  background-color: transparent;
+  border: 1px solid var(--color-cream);
+  padding: 0.4rem 0.8rem;
+}
+
+/* Responsive layout: larger screens get a row-based nav and two-column feature layout */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    width: auto;
+  }
+
+  main {
+    padding: 2.5rem 2rem;
+  }
+
+  .feature-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .feature-row figure,
+  .feature-row picture {
+    flex: 1;
+  }
+}

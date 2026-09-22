@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Star Bakery - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread">
+    <h1>North Star Bakery</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome to North Star Bakery</h2>
+      <p>North Star Bakery has been the heart of the neighborhood for over a decade, baking fresh bread and pastries every morning for commuters, families, and everyone in between. Whether you are stopping in for a quick coffee-shop breakfast or planning a celebration cake, we bake it fresh, we bake it local, and we bake it with you in mind.</p>
+      <img src="images/bakery-storefront.jpg" alt="Exterior of North Star Bakery storefront with warm string lights and an open sign">
+    </section>
+
+    <section aria-labelledby="known-for-heading">
+      <h2 id="known-for-heading">What We're Known For</h2>
+      <p>Our sourdough is milled and fermented in-house, our pastry case changes daily, and our custom cakes are made to order for birthdays, weddings, and neighborhood events. Locals know us for showing up early and staying warm all day.</p>
+    </section>
+
+    <section aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Hours and Location</h2>
+      <p>123 Main Street, your neighborhood, USA</p>
+      <p>Monday through Saturday: 6:00 AM to 6:00 PM</p>
+      <p>Sunday: 7:00 AM to 2:00 PM</p>
+    </section>
+
+    <section aria-labelledby="feature-heading">
+      <h2 id="feature-heading">Featured Item of the Week</h2>
+      <div class="feature-row">
+        <figure>
+          <img src="images/bakery-signature-loaf.jpg" alt="Close-up of North Star Bakery's signature sourdough loaf with a golden, scored crust">
+          <figcaption>Our Signature Loaf: a slow-fermented sourdough baked fresh every morning.</figcaption>
+        </figure>
+        <picture>
+          <source media="(min-width: 800px)" srcset="images/bakery-feature-large.jpg">
+          <source media="(max-width: 799px)" srcset="images/bakery-feature-small.jpg">
+          <img src="images/bakery-feature-large.jpg" alt="Assortment of freshly baked pastries displayed in the bakery case">
+        </picture>
+      </div>
+      <p>Take a look behind the counter and hear a quick welcome from our head baker:</p>
+      <video controls width="480">
+        <source src="media/bakery-behind-scenes.mp4" type="video/mp4">
+        <track kind="captions" srclang="en" label="English captions">
+        Your browser does not support embedded video. You can
+        <a href="media/bakery-behind-scenes.mp4">download the behind-the-scenes video</a> instead,
+        which shows our morning baking process and introduces our head baker.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. 123 Main Street, your neighborhood, USA.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
